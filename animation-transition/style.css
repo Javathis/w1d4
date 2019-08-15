@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+
+  background-color: aqua;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  transition-duration: 800ms;
+}
+
+/* .box:active { */
+.box:hover {
+  width: 200px;
+  height: 200px;
+
+  background-color: chartreuse;
+
+  transform: translate(-50%, -50%) rotate(180deg);
+
+  /* transition-property: background-color, width;
+  transition-delay: 100ms;
+  transition-duration: 1s;
+  transition-timing-function: ease-out; */
+
+  /* property, duration, timing-function, delay */
+  /* transition: width 4s linear 1s, background-color 2s, height 1s; */
+}
+
+.ball {
+  width: 100px;
+  height: 100px;
+
+  border-radius: 50%;
+  background-color: pink;
+
+  animation-name: mySlide;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-delay: 500ms;
+}
+
+.ball:hover {
+  animation-play-state: paused;
+}
+
+@keyframes mySlide {
+  0% {
+    margin-left: 100%;
+    transform: translate(-100%);
+  }
+
+  30% {
+    margin-left: 50%;
+    /* margin-top: 50%; */
+  }
+
+  100% {
+    margin-left: 0%;
+  }
+}
